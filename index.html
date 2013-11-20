@@ -1,13 +1,213 @@
 <html>
 	<head>
 		<title>KDE -Juk Media Player</title>
-		<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+		<style>
+			.page-header {
+			    border-bottom: 1px solid #EEEEEE;
+			    margin: 90px 0 20px;
+			    padding-bottom: 9px;
+			}
+
+			.carosel img{
+				height:500px;
+				width: 900px;
+			}
+			.shadow {
+			  -moz-box-shadow:    3px 3px 5px 6px #ccc;
+			  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+			  box-shadow:         3px 3px 5px 6px #ccc;
+			}
+
+		</style>
 	</head>
 	
 	<body>
-	
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+		          <button data-target=".navbar-ex1-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+		            <span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		          </button>
+		          <a href="index.html" class="navbar-brand">KDE - JuK</a>
+		        </div>
+
+		        <div class="collapse navbar-collapse navbar-ex1-collapse">
+		          <ul class="nav navbar-nav navbar-right">
+		            <li class="active"><a href="#">About</a></li>
+		            <li><a href="#">Development</a></li>
+		            <li><a href="http://docs.kde.org/stable/en/kdemultimedia/juk/index.html">Wiki</a></li>
+		            <li><a href="#">Screenshots</a></li>
+		            <li class="dropdown">
+		              <a data-toggle="dropdown" class="dropdown-toggle" href="#">Releases <b class="caret"></b></a>
+		              <ul class="dropdown-menu">
+		                <li><a href="ftp://ftp.kde.org/pub/kde/stable/latest">JuK 2.2</a></li>
+		                <li><a href="http://developer.kde.org/~wheeler/files/src/juk-1.95a.tar.gz">JuK 1.95</a></li>
+		                <li><a href="http://developer.kde.org/~wheeler/files/src/juk-1.1.tar.gz">JuK 1.1</a></li>
+		                <li><a href="http://developer.kde.org/~wheeler/files/src/juk-1.0-1.tar.gz">JuK 1.0</a></li>
+		              </ul>
+		            </li>
+		            <li><a href="#">Contact Us</a></li>
+		          </ul>
+		        </div>
+
+			</div>
+		</nav>
+
+		<div class="container">
+			<div class="row">
+		    	<div class="col-lg-12">
+		          <h1 class="page-header">A KDE Jukebox</h1>
+		        </div>
+		    </div>
+
+		    <div class="row">
+		    	<div class="col-lg-12">
+		          <!-- <img src="http://developer.kde.org/~wheeler/images/juk-2.2/juk-2.2.png" class="img-responsive"> -->
+
+		          <div data-ride="carousel" class="carousel slide shadow" id="caroselim">
+			        <ol class="carousel-indicators">
+			          <li class="active" data-slide-to="0" data-target="#caroselim"></li>
+			          <li data-slide-to="1" data-target="#caroselim" class=""></li>
+			          <li data-slide-to="2" data-target="#caroselim" class=""></li>
+			        </ol>
+			        <div class="carousel-inner">
+			          <div class="item active">
+			            <img alt="900x500" style="height:550;width:1200;" src="http://developer.kde.org/~wheeler/images/juk-2.2/juk-2.2.png">
+			            <div class="carousel-caption">
+			              <h3>JuK 2.2</h3>
+			              <p>A KDE Jukebox </p>
+			            </div>
+			          </div>
+			          <div class="item">
+			            <img alt="900x500" style="height:550;width:1200;" src="http://www.kde.org/images/screenshots/resized/juk.png">
+			            <div class="carousel-caption">
+			              <h3>Tag Editing</h3>
+			              <p>It allows you to edit the "tags" of your audio files.</p>
+			            </div>
+			          </div>
+			          <div class="item">
+			            <img alt="900x500" style="height:550;width:1200;" src="http://docs.kde.org/stable/en/kdemultimedia/juk/juk-main.png">
+			            <div class="carousel-caption">
+			              <h3>Collection List</h3>
+			              <p>JuK maintains a list of all files that it knows about.</p>
+			            </div>
+			          </div>
+			        </div>
+			        <a data-slide="prev" href="#caroselim" class="left carousel-control">
+			          <span class="glyphicon glyphicon-chevron-left"></span>
+			        </a>
+			        <a data-slide="next" href="#caroselim" class="right carousel-control">
+			          <span class="glyphicon glyphicon-chevron-right"></span>
+			        </a>
+			      </div>
+
+		        </div>
+		    </div>
+
+		    <div class="row">
+		        <div class="col-md-8">
+		          <h2 class="page-header">JuK</h2>
+		            <p>JuK is, well, a jukebox. As is typical with many jukebox applications, JuK allows you to edit the tags of your audio files, and manage your collection and playlists. JuK 2.2 is part of the KDE 3.4 KDE Multimedia package. JuK packages are distributed with basically all current Linux and many Unix distributions. </p>
+		        </div>
+
+		        <div class="col-md-4">
+		          <h2 class="page-header">Development</h2>
+		          	<p>If you'd like to get involved in JuK development, please send patches and
+					  whatnot to <a href="mailto:kde-multimedia@kde.org">kde-multimedia@kde.org</a>.</p>
+					  <p>General information on developing in and for KDE, including instructions on how
+					  to fetch packages from CVS are included in the <a href="http://developer.kde.org/source/anoncvs.html">KDE
+					    Developers' Corner</a>.</p>
+		        </div>
+
+		    </div>
+
+
+		    <div class="row">
+		        <div class="col-lg-12">
+		          <h2 class="page-header" style="margin-top:20px;">Features</h2>
+		          
+		        </div>
+
+      		</div>
+
+
+      		<div class="row">
+
+		        <div class="col-lg-12">
+		          <h2 class="page-header" style="margin-top:20px;">Screenshots</h2>
+		        </div>
+
+		        <div class="col-sm-4">
+		          <img src="http://developer.kde.org/~wheeler/images/juk-2.2/thumbs/juk-2.2.jpg" style="width:450px;height:210px;" class="img-responsive shadow">
+		          <h5 align="center">JuK 2.2</h5>
+		          <p></p>
+		        </div>
+
+		        <div class="col-sm-4">
+		          <img style="width:450px;height:210px;" src="http://developer.kde.org/~wheeler/images/juk-2.2/thumbs/juk-2.2-filerenamer.jpg" class="img-responsive shadow">
+		          <h5 align="center">File Renamer Configuration</h5>
+		          <p></p>
+		        </div>
+
+		        <div class="col-sm-4">
+		          <img style="width:450px;height:210px;" src="http://developer.kde.org/~wheeler/images/juk-2.2/juk-2.2-k3b.png" class="img-responsive shadow">
+		          <h5 align="center">Tag Editor</h5>
+		          <p></p>
+		        </div>
+		        <br>
+		        <div class="col-sm-4">
+		          <img src="http://developer.kde.org/~wheeler/images/juk-2.2/juk-2.2-treeview.png" style="width:450px;height:210px;" class="img-responsive shadow">
+		          <h5 align="center">Tree View</h5>
+		          <p></p>
+		        </div>
+
+		        <div class="col-sm-4">
+		          <img style="width:450px;height:210px;" src="http://developer.kde.org/~wheeler/images/juk-2.2/thumbs/juk-2.2-k3b.jpg" class="img-responsive shadow">
+		          <h5 align="center">CD Burning</h5>
+		          <p></p>
+		        </div>
+
+		        <div class="col-sm-4">
+		          <img style="width:450px;height:210px;" src="http://developer.kde.org/~wheeler/images/juk-2.2/thumbs/juk-2.2-musicbrainz.jpg" class="img-responsive shadow">
+		          <h5 align="center">MusicBrainz Intergation</h5>
+		          <p></p>
+		        </div>
+
+      		</div>
+		</div>
+
+		<!-- footer -->
+
+		<div class="container">
+
+	      <hr>
+
+	      <footer>
+	        <div class="row">
+	          <div class="col-lg-12">
+	            <p align="center">
+			        <a href="http://www.kdedevelopers.org/blog/72">KDE Blog</a> |
+			        <a href="http://blog.directededge.com/">Directed Edge Blog</a> |
+			        <a href="http://twitter.com/scotchi/">Twitter</a> |
+			        <a href="http://www.directededge.com/">Directed Edge</a> |
+			        <a href="http://www.linkedin.com/in/patrickscottwheeler">LinkedIn</a> |
+			        <a href="http://www.xing.com/profile/Scott_Wheeler2">Xing</a> |
+			        <a href="http://www.facebook.com/scotchi">Facebook</a> |
+			        <a href="http://github.com/scotchi">Github</a> |
+			        <a href="mailto:wheeler@kde.org">Email</a>
+			    </p>
+      
+	          </div>
+	        </div>
+	      </footer>
+
+	    </div>
 	</body>
 	<!--all js here -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
-	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
 </html>
